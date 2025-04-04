@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Zeyada } from "next/font/google";
 import localFont from 'next/font/local'
 import "./globals.css";
+
+// Load Zeyada font from Google
+const zeyada = Zeyada({
+  weight: ['400'],  // Zeyada only has 400 weight
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-zeyada',
+});
 
 const switzerRegular = localFont({
   src: [
@@ -16,7 +24,6 @@ const switzerRegular = localFont({
       style: "italic",
     },
     {
-      
       path: "../public/fonts/Switzer-Medium.woff2",
       weight: "500",
       style: "normal",
@@ -31,7 +38,8 @@ const switzerRegular = localFont({
       weight: "700",
       style: "normal",
     },
-  ]
+  ],
+  variable: '--font-switzer',
 });
 
 export const metadata: Metadata = {
@@ -47,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${switzerRegular.className} antialiased`}
+        className={`${switzerRegular.className} ${zeyada.variable} antialiased`}
       >
         {children}
       </body>
