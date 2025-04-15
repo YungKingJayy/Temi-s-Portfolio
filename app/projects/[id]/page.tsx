@@ -3,18 +3,12 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import ProjectHero from "./components/ProjectHero";
 
-// Generate static params for all projects
-export async function generateStaticParams() {
-  return projects.map((project) => ({
-    id: project.id,
-  }));
-}
-
-export default function ProjectDetailPage({
-  params,
-}: {
+type Props = {
   params: { id: string };
-}) {
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
+
+export default function ProjectDetailPage({ params }: Props) {
   const project = projects.find((p) => p.id === params.id);
   if (!project) return notFound();
 
