@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { Zeyada } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import AppLoader from "./components/ui/AppLoader";
+import AppLoaderWrapper from "./components/ui/AppLoaderWrapper";
 import Navbar from "./components/Navbar";
 import GetInTouch from "./components/GetInTouch";
 import Footer from "./components/Footer";
@@ -62,7 +62,7 @@ export default function RootLayout({
       <body
         className={`${switzerRegular.className} ${zeyada.variable} antialiased overflow-x-hidden`}
       >
-        <AppLoader />
+        <AppLoaderWrapper />
         <Navbar />
         <Suspense fallback={null}>{children}</Suspense>
         {/* Additional content section */}
