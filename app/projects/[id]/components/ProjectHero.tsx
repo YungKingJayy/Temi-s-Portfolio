@@ -6,7 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ProjectHero = ({ project }: { project: any }) => {
+import { Project } from "../../data/projects";
+
+type ProjectHeroProps = {
+  project: Project; // Use the imported Project type
+};
+
+const ProjectHero = ({ project }: ProjectHeroProps) => {
   return (
     <section className="max-w-[510px] mx-auto">
       <button

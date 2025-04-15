@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import ButtonVariant from "./ui/ButtonVariant";
 import { projects } from "../projects/data/projects";
-import Link from "next/link";
 
 const Projects = () => {
   return (

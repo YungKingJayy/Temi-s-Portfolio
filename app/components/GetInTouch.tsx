@@ -88,6 +88,7 @@ const GetInTouch = () => {
     } catch (err) {
       setError("Something went wrong. Please try again later.");
       setSubmitStatus("error");
+      console.log(err);
 
       // Reset status after 3 seconds
       setTimeout(() => {
@@ -104,7 +105,7 @@ const GetInTouch = () => {
       <p className="text-primary font-normal text-base leading-[1.4em] mt-3 mb-6">
         I’m always interested in exploring new opportunities, collaborating, or
         exchanging ideas with like-minded individuals. Feel free to book a call
-        or email me if you'd like to see my portfolio deck or to discuss a
+        or email me if you&apos;d like to see my portfolio deck or to discuss a
         potential project.
       </p>
 

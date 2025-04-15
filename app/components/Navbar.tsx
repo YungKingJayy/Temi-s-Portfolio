@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import AnimatedButton from "./ui/AnimatedButton";
 import Image from "next/image";
-import { motion, AnimatePresence, delay } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./ui/Modal";
 
 type NavItemProps = {

@@ -5,8 +5,6 @@ import Projects from "./components/Projects";
 import WorkExperience from "./components/WorkExperience";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import GetInTouch from "./components/GetInTouch";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (
