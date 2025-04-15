@@ -1,6 +1,14 @@
 import { projects } from "../data/projects";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import ProjectHero from "./components/ProjectHero";
+
+// Generate static params for all projects
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}
 
 export default function ProjectDetailPage({
   params,
@@ -8,17 +16,7 @@ export default function ProjectDetailPage({
   params: { id: string };
 }) {
   const project = projects.find((p) => p.id === params.id);
-
-  if (!project) {
-    return (
-      <section className="max-w-[1080px] w-[95%] mx-auto py-20 text-center">
-        <h1 className="text-2xl font-bold">Project not found</h1>
-        <p className="text-gray-600 dark:text-gray-300 mt-2">
-          The project you're looking for doesn't exist.
-        </p>
-      </section>
-    );
-  }
+  if (!project) return notFound();
 
   return (
     <section className="max-w-[1080px] w-[95%] mx-auto flex flex-col justify-center items-center">
