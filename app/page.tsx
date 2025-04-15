@@ -1,9 +1,13 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import WorkExperience from "./components/WorkExperience";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
+import GetInTouch from "./components/GetInTouch";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -27,6 +31,23 @@ export default function Home() {
         {/* Additional content goes here */}
         <About />
         <Projects />
+        <WorkExperience />
+        <Services />
+      </div>
+
+      {/* Testimonials Carousel Section */}
+      <div className="w-full mt-20 mb-16">
+        {/* This is the trick - content overflows the container but container maintains borders */}
+        <div className="w-screen relative left-1/2 right-1/2 -translate-x-1/2 min-h-[333px]">
+          <Testimonials />
+        </div>
+      </div>
+
+      {/* Additional content section */}
+      <div className="px-4">
+        {/* Additional content goes here */}
+        <GetInTouch />
+        <Footer />
       </div>
     </main>
   );

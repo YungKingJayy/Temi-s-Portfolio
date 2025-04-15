@@ -90,7 +90,7 @@ const Navbar = () => {
         label="Home"
       />
 
-      <div className="w-[1px] h-[20px] bg-[#E6E6E6]/50" />
+      <div className="w-[1px] h-[20px] bg-[#000000]/10 rounded-[10px]" />
 
       <div className="flex items-center h-full gap-0">
         <NavItem
@@ -114,7 +114,7 @@ const Navbar = () => {
         />
       </div>
 
-      <div className="w-[1px] h-[20px] bg-[#E6E6E6]/50" />
+      <div className="w-[1px] h-[20px] bg-[#000000]/10 rounded-[10px]" />
 
       <div className="h-full flex items-center">
         <AnimatedButton href="/contact" label="Book a Call" className="h-full py-3.5" />

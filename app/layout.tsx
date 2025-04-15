@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${switzerRegular.className} ${zeyada.variable} antialiased`}
+        className={`${switzerRegular.className} ${zeyada.variable} antialiased overflow-x-hidden`}
       >
         {children}
       </body>

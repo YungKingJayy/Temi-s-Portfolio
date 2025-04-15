@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const PolaroidGallery = () => {
+  // Container scroll animation
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -19,38 +20,76 @@ const PolaroidGallery = () => {
     },
   };
 
-  const commonTransition = {
-    duration: 0.4,
-    ease: [0.3, 1.5, 0.7, 1],
-  };
-
+  // Polaroid entrance animations
   const polaroid1Variants = {
-    rest: {
-      rotate: -8,
+    hidden: {
+      opacity: 0,
+      y: 40,
+      rotate: -15,
+    },
+    visible: {
+      opacity: 1,
       y: 0,
-      x: 0,
-      transition: commonTransition,
+      rotate: -8,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
     },
     hover: {
       rotate: -12,
       y: -15,
       x: -20,
-      transition: commonTransition,
+      transition: {
+        duration: 0.3,
+        ease: [0.3, 1.5, 0.7, 1],
+      },
+    },
+    // Mirror of hover animation with same duration and ease
+    exit: {
+      rotate: -8,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.3, 1.5, 0.7, 1],
+      },
     },
   };
 
   const polaroid2Variants = {
-    rest: {
-      rotate: 15,
+    hidden: {
+      opacity: 0,
+      y: 40,
+      rotate: 24,
+    },
+    visible: {
+      opacity: 1,
       y: 0,
-      x: 0,
-      transition: commonTransition,
+      rotate: 15,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
     },
     hover: {
       rotate: 19,
       y: -15,
       x: 20,
-      transition: commonTransition,
+      transition: {
+        duration: 0.3,
+        ease: [0.3, 1.5, 0.7, 1],
+      },
+    },
+    // Mirror of hover animation with same duration and ease
+    exit: {
+      rotate: 15,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.3, 1.5, 0.7, 1],
+      },
     },
   };
 
@@ -59,14 +98,13 @@ const PolaroidGallery = () => {
       className="relative flex items-center justify-center bg-transparent w-full h-[202px] mt-24"
       initial="hidden"
       whileInView="visible"
+      whileHover="hover"
+      exit="exit"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
     >
       {/* First Polaroid */}
       <motion.div
-        initial="rest"
-        whileHover="hover"
-        animate="rest"
         variants={polaroid1Variants}
         className="absolute w-[178px] h-[202px] bg-white p-2 polaroid left-1/6 shadow-md drop-shadow-lg"
       >
@@ -85,9 +123,6 @@ const PolaroidGallery = () => {
 
       {/* Second Polaroid */}
       <motion.div
-        initial="rest"
-        whileHover="hover"
-        animate="rest"
         variants={polaroid2Variants}
         className="absolute w-[178px] h-[202px] bg-white p-2 -top-1/5 left-[40%] polaroid shadow-md drop-shadow-lg"
       >

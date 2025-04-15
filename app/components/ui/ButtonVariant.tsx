@@ -40,7 +40,7 @@ const ButtonVariant = ({
 
       <motion.span
         className="ml-1"
-        animate={{ x: isHovering ? 4 : 0 }}
+        animate={{ x: isHovering ? 7 : 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 20, duration: 0.3 }}
       >
         {icon}
