@@ -128,7 +128,7 @@ const Navbar = () => {
           </h2>
           <div className="custom-scrollbar rounded-lg overflow-auto h-[600px] scrollbar-thumb-[#000] scrollbar-w-1 scrollbar !scrollbar-thumb-rounded-full !scrollbar-track-rounded-full custom-scrollbar">
             <iframe
-              src="https://cal.com/mcjethro-kalu/15min"
+              src="https://cal.com/temilade-oladipupo-aeo0wi/30min"
               width="100%"
               height="100%"
               frameBorder="0"
