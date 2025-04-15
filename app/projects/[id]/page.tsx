@@ -1,5 +1,4 @@
 import { projects } from "../data/projects";
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import ProjectHero from "./components/ProjectHero";
 
@@ -9,7 +8,17 @@ export default function ProjectDetailPage({
   params: { id: string };
 }) {
   const project = projects.find((p) => p.id === params.id);
-  if (!project) return notFound();
+
+  if (!project) {
+    return (
+      <section className="max-w-[1080px] w-[95%] mx-auto py-20 text-center">
+        <h1 className="text-2xl font-bold">Project not found</h1>
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
+          The project you're looking for doesn't exist.
+        </p>
+      </section>
+    );
+  }
 
   return (
     <section className="max-w-[1080px] w-[95%] mx-auto flex flex-col justify-center items-center">
