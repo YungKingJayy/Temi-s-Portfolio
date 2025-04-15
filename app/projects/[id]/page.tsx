@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import ProjectHero from "./components/ProjectHero";
 
-type Props = {
-  params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
-};
-
-export default function ProjectDetailPage({ params }: Props) {
-  const project = projects.find((p) => p.id === params.id);
+export default async function ProjectDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  if (!id) return notFound();
+  const project = projects.find((p) => p.id === id);
   if (!project) return notFound();
 
   return (
