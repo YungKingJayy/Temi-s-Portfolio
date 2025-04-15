@@ -17,6 +17,64 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+
+  /* Modal animations */
+  --keyframes-fadeIn: {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  ;
+
+  --keyframes-fadeOut: {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  ;
+
+  --keyframes-scaleIn: {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  ;
+
+  --keyframes-scaleOut: {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: translate(-50%, -48%) scale(0.96);
+    }
+  }
+
+  ;
+
+  --animation-fadeIn: fadeIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-fadeOut: fadeOut 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-scaleIn: scaleIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animation-scaleOut: scaleOut 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -39,4 +97,29 @@ body {
 .polaroid {
   /* box-shadow: -9px 28px 20px rgba(0, 0, 0, 0.45); */
   /* box-shadow: rgba(0, 0, 0, 0.45) 0px 20px 30px -10px; */
+}
+
+.custom-scrollbar {
+  overflow-y: auto;
+  /* Firefox scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: #5a5a5a66 transparent;
+  /* Other browsers use the webkit selectors below */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5a5a5a66 !important;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@plugin 'tailwind-scrollbar' {
+  nocompatible: true;
 }

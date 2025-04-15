@@ -1,5 +1,4 @@
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="max-w-[1080px] w-[95%] mx-auto border-l border-r border-[#E6E6E6] flex flex-col justify-center items-center relative">
       {/* First section */}
       <div className="px-4">
-        <Navbar />
         <Hero />
       </div>
 
@@ -41,13 +39,6 @@ export default function Home() {
         <div className="w-screen relative left-1/2 right-1/2 -translate-x-1/2 min-h-[333px]">
           <Testimonials />
         </div>
-      </div>
-
-      {/* Additional content section */}
-      <div className="px-4">
-        {/* Additional content goes here */}
-        <GetInTouch />
-        <Footer />
       </div>
     </main>
   );

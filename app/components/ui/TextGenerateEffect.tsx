@@ -8,11 +8,13 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  fontSize = "2.625rem",
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  fontSize?: string;
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
@@ -22,6 +24,7 @@ export const TextGenerateEffect = ({
       {
         opacity: 1,
         filter: filter ? "blur(0px)" : "none",
+        y: 0, // End position (no offset)
       },
       {
         duration: duration ? duration : 1,
@@ -40,9 +43,12 @@ export const TextGenerateEffect = ({
               className="text-black opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
+                y: "10px", // Initial position (offset down)
+                display: "inline-block", // Ensures the transform works correctly
+                marginRight: "0.15em", // Add space between words
               }}
             >
-              {word}{" "}
+              {word}
             </motion.span>
           );
         })}
@@ -53,7 +59,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-semibold", className)}>
       <div className="mt-0">
-        <div className="text-black text-[2.625rem] leading-[110%]">
+        <div className="text-black" style={{ fontSize, lineHeight: "110%" }}>
           {renderWords()}
         </div>
       </div>
