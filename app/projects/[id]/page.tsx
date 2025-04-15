@@ -2,22 +2,14 @@ import { projects } from "../data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import ProjectHero from "./components/ProjectHero";
-import { Metadata } from "next"; // Import Metadata if you plan to use generateMetadata
 
-// Define the expected props type for a Next.js page component
-type Props = {
+export default function ProjectDetailPage({
+  params,
+}: {
   params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-// Destructure both params and searchParams to match the Props type
-export default function ProjectDetailPage({ params, searchParams }: Props) {
-  // Use the defined Props type
+}) {
   const project = projects.find((p) => p.id === params.id);
   if (!project) return notFound();
-
-  // You can optionally use searchParams now or later
-  // console.log(searchParams);
 
   return (
     <section className="max-w-[1080px] w-[95%] mx-auto flex flex-col justify-center items-center">
@@ -75,14 +67,3 @@ export default function ProjectDetailPage({ params, searchParams }: Props) {
     </section>
   );
 }
-
-// Optional: Add generateMetadata function if needed
-// Ensure it uses the same Props definition or compatible inline types.
-// export async function generateMetadata({ params }: Props): Promise<Metadata> {
-//   const project = projects.find((p) => p.id === params.id);
-//   if (!project) return { title: "Project Not Found" };
-//   return {
-//     title: `${project.title} | Project Details`,
-//     description: project.description,
-//   };
-// }
