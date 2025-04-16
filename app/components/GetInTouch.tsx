@@ -99,10 +99,10 @@ const GetInTouch = () => {
 
   return (
     <section className="max-w-[510px] py-[70px]">
-      <h2 className="font-semibold text-black text-2xl leading-[110%]">
+      <h2 className="font-semibold text-black text-xl sm:text-2xl leading-[110%]">
         Get in touch
       </h2>
-      <p className="text-primary font-normal text-base leading-[1.4em] mt-3 mb-6">
+      <p className="text-primary font-normal text-sm sm:text-base leading-[1.4em] mt-3 mb-6 tracking-[0.01em]">
         I’m always interested in exploring new opportunities, collaborating, or
         exchanging ideas with like-minded individuals. Feel free to book a call
         or email me if you&apos;d like to see my portfolio deck or to discuss a

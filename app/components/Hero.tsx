@@ -41,7 +41,10 @@ const Hero = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div variants={itemVariants} className="w-[72px] h-[72px] sm:w-[100px] sm:h-[100px] mb-5 rounded-full">
+      <motion.div
+        variants={itemVariants}
+        className="w-[72px] h-[72px] sm:w-[100px] sm:h-[100px] mb-5 rounded-full"
+      >
         <Image
           src="/images/avatar.webp"
           alt="Temi Oladipupo"
@@ -58,7 +61,7 @@ const Hero = () => {
 
       <motion.p
         variants={itemVariants}
-        className="mt-4 text-base leading-[1.4em] font-normal text-primary"
+        className="mt-3 sm:mt-4 text-sm sm:text-base leading-[1.4em] font-normal text-primary tracking-[0.01em]"
       >
         Bringing brands to life with bold visuals & seamless experiences.
         Creative strategist & aspiring innovator, always pushing boundaries.
@@ -66,16 +69,16 @@ const Hero = () => {
 
       <motion.div
         variants={itemVariants}
-        className="mt-5 flex gap-3 items-center"
+        className="mt-5 flex flex-col sm:flex-row gap-3 sm:items-center"
       >
         <AnimatedButton
           type="button"
           onClick={() => setIsBookCallOpen(true)}
           label="Book a Call"
-          className="py-3.5"
+          className="py-3.5 self-start"
         />
 
-        <div className="flex items-center gap-2 px-5 py-3.5 bg-[#E1F9DC] rounded-[100px]">
+        <div className="flex items-center gap-2 px-5 py-3.5 bg-[#E1F9DC] rounded-[100px] self-start">
           <div className="w-2 h-2 rounded-full bg-[#178D00]" />
           <p className="text-[#178D00] text-base leading-[1.2em] font-medium">
             Available for new projects

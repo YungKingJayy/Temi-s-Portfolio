@@ -6,7 +6,7 @@ import { projects } from "../projects/data/projects";
 const Projects = () => {
   return (
     <section className="mt-28 max-w-[510px] flex flex-col items-center">
-      <h2 className="text-[2rem] font-semibold leading-[110%] tracking-[-0.03em] text-center">
+      <h2 className="text-xl sm:text-[2rem] font-semibold leading-[110%] tracking-[-0.03em] text-center">
         Here&apos;s What I&apos;ve been Up To.
       </h2>
       <div className="flex flex-col gap-7 mt-8 w-full">
@@ -25,10 +25,10 @@ const Projects = () => {
               />
             </div>
             <div className="flex flex-col gap-4 px-5">
-              <p className="font-semibold text-2xl leading-[110%] tracking-[-0.03em]">
+              <p className="font-semibold text-lg sm:text-2xl leading-[110%] tracking-[-0.03em]">
                 {project.title}
               </p>
-              <p className="text-primary text-base tracking-[0.01em] leading-[1.4em]">
+              <p className="text-primary text-sm sm:text-base tracking-[0.01em] leading-[1.4em]">
                 {project.description}
               </p>
               <ButtonVariant

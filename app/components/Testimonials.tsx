@@ -74,11 +74,11 @@ const Testimonials = () => {
       variants={carouselVariants}
       className="w-full h-full overflow-hidden"
     >
-      <h2 className="font-semibold text-black text-center text-2xl leading-[110%] mb-12">
+      <h2 className="font-semibold text-black text-xl text-center sm:text-2xl leading-[110%] mb-12">
         Testimonials
       </h2>
       {/* CSS-based continuous slider */}
-      <div className="infinite-carousel-container w-full min-h-[333px] overflow-hidden relative">
+      <div className="infinite-carousel-container w-full min-h-[300px] sm:min-h-[333px] overflow-hidden relative">
         <div
           className="infinite-carousel-track flex gap-3.5"
           style={{
@@ -89,7 +89,7 @@ const Testimonials = () => {
           {allSlides.map((slide, index) => (
             <div
               key={index}
-              className="carousel-slide flex-shrink-0 w-[374px] min-h-[305px] overflow-hidden mr-4"
+              className="carousel-slide flex-shrink-0 w-[374px] min-h-[270px] sm:min-h-[305px] overflow-hidden mr-4"
             >
               <div className="relative w-full h-full bg-gray-100 rounded-[20px] border border-gray-200 shadow-inner shadow-white p-6">
                 <div className="relative w-full h-full rounded-[10px] overflow-hidden flex flex-col justify-between gap-[26px]">
@@ -101,7 +101,7 @@ const Testimonials = () => {
                     sizes="(max-width: 768px) 100vw, 320px"
                     priority={index < 3}
                   /> */}
-                  <p className="text-primary font-normal text-base leading-[1.4em] tracking-[0.01em]">
+                  <p className="text-primary font-normal text-sm sm:text-base leading-[1.4em] tracking-[0.01em]">
                     {slide.comment}
                   </p>
                   <div className="flex items-center gap-2.5">
@@ -113,11 +113,11 @@ const Testimonials = () => {
                       className="rounded-full"
                     />
                     <div>
-                      <p className="text-black font-medium text-lg leading-[1.2em] tracking-[-0.02em]">
+                      <p className="text-black font-medium text-base sm:text-lg leading-[1.2em] tracking-[-0.02em]">
                         {slide.name}
                       </p>
                       {slide.role && (
-                        <p className="text-primary font-normal text-base leading-[1.4em] tracking-[0.01em]">
+                        <p className="text-primary font-normal text-sm sm:text-base leading-[1.4em] tracking-[0.01em]">
                           {slide.role}
                         </p>
                       )}

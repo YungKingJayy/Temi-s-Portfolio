@@ -40,14 +40,14 @@ const About = () => {
       variants={containerVariants}
     >
       <motion.h2
-        className="font-semibold text-black text-2xl leading-[110%]"
+        className="font-semibold text-black text-xl sm:text-2xl leading-[110%] tracking-[-0.03em]"
         variants={itemVariants}
       >
         About
       </motion.h2>
 
       <motion.p
-        className="text-primary font-normal text-base leading-[1.4em] mt-3"
+        className="text-primary font-normal sm:text-base leading-[1.4em] mt-3 text-sm tracking-[0.01em]"
         variants={itemVariants}
       >
         I&apos;m Temilade Oladipupo, a social media manager passionate about

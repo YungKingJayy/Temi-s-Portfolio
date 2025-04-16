@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="max-w-[1080px] w-[95%] mx-auto border-l border-r border-[#E6E6E6] flex flex-col justify-center items-center relative">
       {/* First section */}
-      <div className="px-4">
+      <div className="px-6">
         <Hero />
       </div>
 
@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       {/* Additional content section */}
-      <div className="px-4">
+      <div className="px-6">
         {/* Additional content goes here */}
         <About />
         <Projects />
@@ -34,7 +34,7 @@ export default function Home() {
       {/* Testimonials Carousel Section */}
       <div className="w-full mt-20 mb-16">
         {/* This is the trick - content overflows the container but container maintains borders */}
-        <div className="w-screen relative left-1/2 right-1/2 -translate-x-1/2 min-h-[333px]">
+        <div className="w-screen relative left-1/2 right-1/2 -translate-x-1/2 min-h-[300px] sm:min-h-[333px]">
           <Testimonials />
         </div>
       </div>

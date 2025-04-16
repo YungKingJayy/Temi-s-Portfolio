@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section className="max-w-[510px] py-9">
       <div className="flex flex-col gap-[30px] items-center">
-        <p className="text-primary text-center text-base font-normal leading-[1.4em] tracking-[0.01em]">
+        <p className="text-primary text-center text-sm sm:text-base font-normal leading-[1.4em] tracking-[0.01em]">
           Copyright © 2025 Temilade Oladipupo. All rights reserved.
         </p>
         <div className="flex items-center justify-center gap-5">
