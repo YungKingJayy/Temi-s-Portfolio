@@ -17,7 +17,7 @@ const Projects = () => {
           >
             <div className="w-full rounded-[20px] overflow-hidden">
               <Image
-                src={project.image || "/placeholder-image.jpg"}
+                src={project.image || "/placeholder-image.webp"}
                 alt={project.title}
                 className="rounded-[20px] w-full h-auto object-cover"
                 width={800}

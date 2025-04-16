@@ -7,6 +7,7 @@ import AppLoaderWrapper from "./components/ui/AppLoaderWrapper";
 import Navbar from "./components/Navbar";
 import GetInTouch from "./components/GetInTouch";
 import Footer from "./components/Footer";
+import ProjectPrefetcher from "./components/ui/ProjectPrefetcher";
 
 // Load Zeyada font from Google
 const zeyada = Zeyada({
@@ -64,6 +65,7 @@ export default function RootLayout({
       >
         <AppLoaderWrapper />
         <Navbar />
+        <ProjectPrefetcher />
         <Suspense fallback={null}>{children}</Suspense>
         {/* Additional content section */}
         <div className="px-4 max-w-[1080px] w-[95%] mx-auto flex flex-col justify-center items-center">

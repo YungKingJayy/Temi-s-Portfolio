@@ -15,11 +15,11 @@ type ProjectHeroProps = {
 
 const ProjectHero = ({ project }: ProjectHeroProps) => {
   const router = useRouter();
-  
+
   const handleGoBack = () => {
     router.back();
   };
-  
+
   return (
     <section className="max-w-[510px] mx-auto">
       <button

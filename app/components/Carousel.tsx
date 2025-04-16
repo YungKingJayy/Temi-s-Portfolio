@@ -10,10 +10,10 @@ import "swiper/css/autoplay";
 
 const Carousel = () => {
   const slides = [
-    "/images/slide1.png",
-    "/images/slide2.png",
-    "/images/slide3.png",
-    "/images/slide4.png",
+    "/images/slide1.webp",
+    "/images/slide2.webp",
+    "/images/slide3.webp",
+    "/images/slide4.webp",
   ];
 
   // Create a larger array with duplicated slides for seamless looping

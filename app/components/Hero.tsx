@@ -43,7 +43,7 @@ const Hero = () => {
     >
       <motion.div variants={itemVariants}>
         <Image
-          src="/images/avatar.jpg"
+          src="/images/avatar.webp"
           alt="Temi Oladipupo"
           width={100}
           height={100}

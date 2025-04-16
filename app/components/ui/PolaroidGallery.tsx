@@ -110,7 +110,7 @@ const PolaroidGallery = () => {
       >
         <div className="w-full h-[161px] relative">
           <Image
-            src="/images/photo.jpg"
+            src="/images/photo.webp"
             alt="Polaroid 1"
             fill
             className="object-cover"
@@ -128,7 +128,7 @@ const PolaroidGallery = () => {
       >
         <div className="w-full h-[161px] relative">
           <Image
-            src="/images/photo.jpg"
+            src="/images/photo.webp"
             alt="Polaroid 2"
             fill
             className="object-cover"

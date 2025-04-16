@@ -15,28 +15,28 @@ const Testimonials = () => {
       role: "CEO",
       comment:
         "Temilade has an exceptional ability to transform complex problems into elegant design solutions. She was integral in redesigning our app, improving both its functionality and visual appeal. Temilade’s dedication to understanding the user's needs, combined with her technical expertise, makes her an outstanding designer to work with.",
-      image: "/images/david.jpg",
+      image: "/images/david.webp",
     },
     {
       name: "Sarah",
       role: "Head of Design",
       comment:
         "Working with Temilade was an absolute pleasure! Her keen eye for detail and deep understanding of user experience transformed our project from concept to reality. She delivered a design that was not only visually stunning but also highly intuitive for our users. Temilade’s ability to listen to feedback and iterate quickly made her an invaluable member of our team.",
-      image: "/images/sarah.jpg",
+      image: "/images/sarah.webp",
     },
     {
       name: "Tom",
       role: "Product Manager",
       comment:
         "Temilade is a product designer who truly elevates the design process. Her innovative approach and creative solutions helped us rethink the entire user journey. Her work doesn’t just look great—it solves real problems, making it easy for users to engage with our product. I highly recommend Temilade for any design challenges.",
-      image: "/images/tom.jpg",
+      image: "/images/tom.webp",
     },
     {
       name: "Jessica",
       role: "Marketing Director",
       comment:
         "I’ve had the pleasure of collaborating with Temilade on several projects, and she never fails to impress. Her design aesthetic is both modern and functional, and her communication skills make working with her seamless. Temilade combines creativity with practicality, ensuring that every design choice serves both the brand and the user’s needs.",
-      image: "/images/jessica.jpg",
+      image: "/images/jessica.webp",
     },
   ];
 
