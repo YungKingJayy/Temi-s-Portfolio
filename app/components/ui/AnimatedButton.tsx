@@ -29,7 +29,7 @@ const AnimatedButton = ({
   const [isHovering, setIsHovering] = useState(false);
 
   const commonProps = {
-    className: `relative flex items-center bg-secondary hover:bg-secondary/85 rounded-[14px] ps-6 pe-[18px] py-3 text-base leading-[1.2em] font-medium text-white transition-all duration-300 ease-in-out overflow-hidden gap-2 ${className}`,
+    className: `relative flex items-center bg-secondary hover:bg-secondary/85 rounded-[14px] ps-6 pe-[18px] py-3 text-base leading-[1.2em] font-medium text-white transition-all duration-300 ease-in-out overflow-hidden gap-2 cursor-pointer ${className}`,
     onMouseEnter: () => setIsHovering(true),
     onMouseLeave: () => setIsHovering(false),
   };
