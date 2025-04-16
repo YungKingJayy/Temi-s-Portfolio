@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 interface AnimatedButtonProps {
   href: string;
