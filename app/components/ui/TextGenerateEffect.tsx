@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "../../lib/utils";
 
@@ -8,16 +8,42 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
-  fontSize = "2.625rem",
+  fontSize = { mobile: "2rem", default: "2.625rem" },
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
-  fontSize?: string;
+  fontSize?: string | { mobile?: string; default?: string };
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
+  const [currentFontSize, setCurrentFontSize] = useState<string>("2.625rem");
+
+  // Handle responsive font size
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 768;
+
+      if (typeof fontSize === "string") {
+        setCurrentFontSize(fontSize);
+      } else {
+        const mobileFontSize = fontSize.mobile || "2rem";
+        const defaultFontSize = fontSize.default || "2.625rem";
+        setCurrentFontSize(isMobile ? mobileFontSize : defaultFontSize);
+      }
+    };
+
+    // Initial setting
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, [fontSize]);
+
   useEffect(() => {
     animate(
       "span",
@@ -59,7 +85,10 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-semibold", className)}>
       <div className="mt-0">
-        <div className="text-black" style={{ fontSize, lineHeight: "110%" }}>
+        <div
+          className="text-black"
+          style={{ fontSize: currentFontSize, lineHeight: "110%" }}
+        >
           {renderWords()}
         </div>
       </div>

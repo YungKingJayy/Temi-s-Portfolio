@@ -13,7 +13,6 @@ export default function ProjectPrefetcher() {
       router.prefetch(`/projects/${project.id}`);
     });
 
-    console.log("Prefetched all project detail pages");
   }, [router]);
 
   // This component doesn't render anything visible

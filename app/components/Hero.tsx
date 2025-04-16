@@ -41,13 +41,13 @@ const Hero = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div variants={itemVariants}>
+      <motion.div variants={itemVariants} className="w-[72px] h-[72px] sm:w-[100px] sm:h-[100px] mb-5 rounded-full">
         <Image
           src="/images/avatar.webp"
           alt="Temi Oladipupo"
-          width={100}
-          height={100}
-          className="rounded-full w-[100px] h-[100px] object-cover mb-5"
+          width={72}
+          height={72}
+          className="rounded-full w-full h-full object-cover"
           priority
         />
       </motion.div>
@@ -87,7 +87,7 @@ const Hero = () => {
           <h2 className="text-2xl font-semibold mb-4 text-white">
             Book a Call
           </h2>
-          <div className="custom-scrollbar rounded-lg overflow-auto h-[600px] scrollbar-thumb-[#000] scrollbar-w-1 scrollbar !scrollbar-thumb-rounded-full !scrollbar-track-rounded-full custom-scrollbar">
+          <div className="custom-scrollbar rounded-lg overflow-auto h-[60vh] max-h-[600px] scrollbar-thumb-[#000] scrollbar-w-1 scrollbar !scrollbar-thumb-rounded-full !scrollbar-track-rounded-full">
             <iframe
               src="https://cal.com/temilade-oladipupo-aeo0wi/30min"
               width="100%"
@@ -95,6 +95,7 @@ const Hero = () => {
               frameBorder="0"
               className="rounded-lg"
               allow="camera; microphone; fullscreen; display-capture"
+              title="Book a 30-minute call with Temilade Oladipupo"
             ></iframe>
           </div>
         </div>

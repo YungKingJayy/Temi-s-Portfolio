@@ -126,7 +126,7 @@ const Navbar = () => {
           <h2 className="text-2xl font-semibold mb-4 text-white">
             Book a Call
           </h2>
-          <div className="custom-scrollbar rounded-lg overflow-auto h-[600px] scrollbar-thumb-[#000] scrollbar-w-1 scrollbar !scrollbar-thumb-rounded-full !scrollbar-track-rounded-full custom-scrollbar">
+          <div className="custom-scrollbar rounded-lg overflow-auto h-[60vh] max-h-[600px] scrollbar-thumb-[#000] scrollbar-w-1 scrollbar !scrollbar-thumb-rounded-full !scrollbar-track-rounded-full">
             <iframe
               src="https://cal.com/temilade-oladipupo-aeo0wi/30min"
               width="100%"
@@ -134,6 +134,7 @@ const Navbar = () => {
               frameBorder="0"
               className="rounded-lg"
               allow="camera; microphone; fullscreen; display-capture"
+              title="Book a 30-minute call with Temilade Oladipupo"
             ></iframe>
           </div>
         </div>
