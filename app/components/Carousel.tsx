@@ -34,9 +34,9 @@ const Carousel = () => {
       transition: {
         duration: 1.2,
         delay: 0.4,
-        ease: [0.22, 1, 0.36, 1]
-      }
-    }
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
   if (!mounted) {
@@ -64,7 +64,13 @@ const Carousel = () => {
               key={index}
               className="carousel-slide flex-shrink-0 w-[428px] h-[333px] overflow-hidden mr-4"
             >
-              <div className="relative w-full h-full bg-gray-100 rounded-[20px] border border-gray-200 shadow-inner shadow-white p-6">
+              <div
+                className="relative w-full h-full bg-gray-100 rounded-[20px] border border-gray-200 shadow-inner shadow-white p-6"
+                style={{
+                  boxShadow: "rgb(255, 255, 255) 0px 3px 0px 0px inset",
+                  transform: "none",
+                }}
+              >
                 <div className="relative w-full h-full rounded-[10px] shadow-lg shadow-black/25 overflow-hidden">
                   <Image
                     src={slide}
@@ -88,10 +94,12 @@ const Carousel = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-${slides.length * 444}px); /* Move exactly the width of the original slides */
+            transform: translateX(
+              -${slides.length * 444}px
+            ); /* Move exactly the width of the original slides */
           }
         }
-        
+
         /* Prevent animation from pausing when tab is inactive */
         .infinite-carousel-track {
           will-change: transform;
