@@ -29,16 +29,16 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
         <ArrowLeft className="text-sm" />
         <p>Go back</p>
       </button>
-      <div className="w-full items-end justify-between gap-4 flex">
+      <div className="w-full sm:items-end justify-between gap-4 flex flex-col sm:flex-row">
         <TextGenerateEffect
           words={project.title}
           className="font-semibold tracking-[-0.03em] leading-[110%]"
-          fontSize="32px"
+          fontSize={{ mobile: "26px", default: "32px" }}
         />
         <Link
           href={project.link || "#"}
           target="_blank"
-          className="flex items-center gap-3.5 px-6 py-3.5 rounded-[100px] border border-black/10"
+          className="flex items-center gap-3.5 px-6 py-3.5 rounded-[100px] border border-black/10 self-start"
         >
           <p className="text-nowrap font-medium text-base text-black leading-[1.2em] tracking-[-0.02em]">
             Live Website

@@ -14,7 +14,7 @@ export default async function ProjectDetailPage({
   if (!project) return notFound();
 
   return (
-    <section className="max-w-[510px] w-full mx-auto flex flex-col justify-center items-center">
+    <section className="max-w-[510px] px-6 md:px-0 w-[95%] mx-auto flex flex-col justify-center items-center">
       <div className="pt-[190px] flex flex-col gap-[40px] md:gap-[70px]">
         <div className="space-y-4">
           <div className="flex flex-col gap-[40px] md:gap-[70px]">
