@@ -15,7 +15,7 @@ export default async function ProjectDetailPage({
 
   return (
     <section className="max-w-[510px] px-6 md:px-0 w-[95%] mx-auto flex flex-col justify-center items-center">
-      <div className="pt-[190px] flex flex-col gap-[40px] md:gap-[70px]">
+      <div className="pt-[110px] md:pt-[190px] flex flex-col gap-[40px] md:gap-[70px]">
         <div className="space-y-4">
           <div className="flex flex-col gap-[40px] md:gap-[70px]">
             <ProjectHero project={project} />

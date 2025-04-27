@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="pt-[190px] max-w-[510px]"
+      className="pt-[110px] md:pt-[190px] max-w-[510px]"
       id="hero"
       initial="hidden"
       animate="visible"
