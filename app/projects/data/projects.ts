@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     id: "project-one",
     title: "Aero Landing page design",
-    description: "This project focuses on the design and development of a comprehensive AI chatbot platform, Aero.",
+    description: "This project focuses on the design and development of a comprehensive AI chatbot platform, Aero. The goal was to create a modern, intuitive user experience that combines functionality with a sleek, professional design.",
     image: "/images/slide1.webp",
     tags: ["Next.js", "React"],
     link: "https://example.com/project-one",

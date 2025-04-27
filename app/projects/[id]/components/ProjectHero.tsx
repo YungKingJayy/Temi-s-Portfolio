@@ -29,7 +29,7 @@ const ProjectHero = ({ project }: ProjectHeroProps) => {
         <ArrowLeft className="text-sm" />
         <p>Go back</p>
       </button>
-      <div className="w-full items-end justify-between gap-[73px] flex mb-[70px]">
+      <div className="w-full items-end justify-between gap-4 flex">
         <TextGenerateEffect
           words={project.title}
           className="font-semibold tracking-[-0.03em] leading-[110%]"
