@@ -32,7 +32,7 @@ const Services = () => {
         How Can I Help?
       </h2>
       <p className="font-normal text-primary text-sm sm:text-base tracking-[0.01em] leading-[1.4em] mt-4 mb-8 text-center">
-        Let's turn your vision into something amazing.
+        Let&apos;s turn your vision into something amazing.
       </p>
       <div className="grid grid-cols-2 gap-[10px]">
         {services.map((service, index) => (
