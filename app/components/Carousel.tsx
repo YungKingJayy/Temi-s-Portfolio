@@ -14,6 +14,7 @@ const Carousel = () => {
     "/images/slide2.webp",
     "/images/slide3.webp",
     "/images/slide4.webp",
+    "/images/slide5.webp",
   ];
 
   // Create a larger array with duplicated slides for seamless looping
