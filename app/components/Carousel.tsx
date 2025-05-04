@@ -96,7 +96,7 @@ const Carousel = () => {
           }
           100% {
             transform: translateX(
-              -2220px
+              -${slides.length * 444}px
             ); /* Move exactly the width of the original slides */
           }
         }

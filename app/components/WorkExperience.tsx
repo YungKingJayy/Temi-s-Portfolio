@@ -3,28 +3,36 @@ import React from "react";
 const WorkExperience = () => {
   const workExperience = [
     {
-      company: "Aura",
-      position: "Lead Designer at",
+      company: "TJohnMD",
+      position: "Social Media Manager at",
       duration: "2024 - Present",
-      logo: "/icons/aura.svg",
+      logo: "/icons/johnmd.png",
       textColor: "#0C5BD3",
       backgroundColor: "#E2EDFF",
     },
     {
-      company: "Apple",
-      position: "Senior UI/UX Designer at",
-      duration: "2022 - 2024",
-      logo: "/icons/apple.svg",
+      company: "Multiply Mortgage",
+      position: "Social Media Manager at",
+      duration: "2024 - 2025",
+      logo: "/icons/multiplymortgage.png",
       textColor: "#000000",
       backgroundColor: "#EFEFEF",
     },
     {
-      company: "Shopify",
-      position: "Product Designer at",
-      duration: "2020 - 2022",
-      logo: "/icons/shopify.svg",
-      textColor: "#5F8E3E",
-      backgroundColor: "#EEFFE2",
+      company: "JMS Consulting",
+      position: "Social Media Manager at",
+      duration: "2024 - 2025",
+      logo: "/icons/jms.png",
+      textColor: "#0C5BD3",
+      backgroundColor: "#E2EDFF",
+    },
+    {
+      company: "Channel Crawler",
+      position: "Social Media Manager at",
+      duration: "2023 - 2024",
+      logo: "/icons/channelcrawler.png",
+      textColor: "#ed2f31",
+      backgroundColor: "#fde2e2",
     },
   ];
 
@@ -56,7 +64,7 @@ const WorkExperience = () => {
                 <img
                   src={experience.logo}
                   alt={experience.company}
-                  className="object-cover"
+                  className="object-cover max-w-5"
                 />
                 <p className="text-nowrap font-medium text-sm sm:text-base tracking-[-0.03em] leading-[110%]">
                   {experience.company}

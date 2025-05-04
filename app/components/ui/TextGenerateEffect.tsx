@@ -60,22 +60,39 @@ export const TextGenerateEffect = ({
   }, [scope.current]);
 
   const renderWords = () => {
+    // Split the entire text by periods first
+    const sentences = words.split(".").filter(Boolean);
+
     return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
+      <motion.div ref={scope} className="flex flex-col">
+        {sentences.map((sentence, sentenceIdx) => {
+          // Split each sentence into words
+          const sentenceWords = sentence.trim().split(" ").filter(Boolean);
+
           return (
-            <motion.span
-              key={word + idx}
-              className="text-black opacity-0"
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-                y: "10px", // Initial position (offset down)
-                display: "inline-block", // Ensures the transform works correctly
-                marginRight: "0.15em", // Add space between words
-              }}
-            >
-              {word}
-            </motion.span>
+            <div key={`sentence-${sentenceIdx}`} className="text-nowrap">
+              {sentenceWords.map((word, wordIdx) => {
+                return (
+                  <motion.span
+                    key={`${sentenceIdx}-${word}-${wordIdx}`}
+                    className="text-black opacity-0"
+                    style={{
+                      filter: filter ? "blur(10px)" : "none",
+                      y: "10px", // Initial position (offset down)
+                      display: "inline-block", // Ensures the transform works correctly
+                      marginRight: "0.15em", // Add space between words
+                    }}
+                  >
+                    {word}
+                    {/* Add period back at the end of non-empty words if it's not the last sentence */}
+                    {wordIdx === sentenceWords.length - 1 &&
+                    sentenceIdx < sentences.length - 1
+                      ? "."
+                      : ""}
+                  </motion.span>
+                );
+              })}
+            </div>
           );
         })}
       </motion.div>

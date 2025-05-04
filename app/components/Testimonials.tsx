@@ -82,7 +82,7 @@ const Testimonials = () => {
         <div
           className="infinite-carousel-track flex gap-3.5"
           style={{
-            animation: "slideAnimation 20s linear infinite",
+            animation: "slideTestimonialAnimation 20s linear infinite",
             width: `${allSlides.length * 390}px`, // 428px width + 16px gap
           }}
         >
@@ -132,7 +132,7 @@ const Testimonials = () => {
 
       {/* CSS animation keyframes */}
       <style jsx global>{`
-        @keyframes slideAnimation {
+        @keyframes slideTestimonialAnimation {
           0% {
             transform: translateX(0);
           }

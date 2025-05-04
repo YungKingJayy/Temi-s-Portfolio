@@ -56,7 +56,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div variants={itemVariants}>
-        <TextGenerateEffect words="Hey, I'm Temilade. Dreamer & Strategist" />
+        <TextGenerateEffect words="Hey, I'm Temilade.Social Media Manager" />
       </motion.div>
 
       <motion.p

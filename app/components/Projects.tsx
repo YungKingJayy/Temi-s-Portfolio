@@ -2,10 +2,22 @@ import Image from "next/image";
 import React from "react";
 import ButtonVariant from "./ui/ButtonVariant";
 import { projects } from "../projects/data/projects";
+import InfiniteIconCarousel from "./ui/InfiniteIconCarousel";
 
 const Projects = () => {
+  const icons = [
+    "/icons/linkedin-grey.png",
+    "/icons/facebook-grey.png",
+    "/icons/instagram-grey.png",
+    "/icons/twitter-grey.png",
+    "/icons/tiktok-grey.png",
+  ];
+
   return (
     <section className="mt-28 max-w-[510px] flex flex-col items-center">
+      <div className="w-full mb-8">
+        <InfiniteIconCarousel icons={icons} />
+      </div>
       <h2 className="text-xl sm:text-[2rem] font-semibold leading-[110%] tracking-[-0.03em] text-center">
         Here&apos;s What I&apos;ve been Up To.
       </h2>
