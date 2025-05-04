@@ -17,7 +17,7 @@ export const TextGenerateEffect = ({
   fontSize?: string | { mobile?: string; default?: string };
 }) => {
   const [scope, animate] = useAnimate();
-  const wordsArray = words.split(" ");
+  // const wordsArray = words.split(" ");
   const [currentFontSize, setCurrentFontSize] = useState<string>("2.625rem");
 
   // Handle responsive font size
