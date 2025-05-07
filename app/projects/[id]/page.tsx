@@ -259,7 +259,7 @@ export default async function ProjectDetailPage({
             </h2>
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 mt-4">
               <p className="text-primary font-normal italic sm:text-base leading-[1.6em] text-sm tracking-[0.01em]">
-                "{project.clientTestimonial.quote}"
+                &quot;{project.clientTestimonial.quote}&quot;
               </p>
               <div className="mt-4 flex items-center gap-2">
                 <div>
